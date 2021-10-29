@@ -1,0 +1,21 @@
+diff --git a/dist/tree.js b/dist/tree.js
+index f0b070263e8214e5b58f594ba39185ff03a19364..5484d4e6e3a4560f0d321fa1de84835eb0d79d62 100644
+--- a/dist/tree.js
++++ b/dist/tree.js
+@@ -103,15 +103,8 @@ const reduceTreeNodeToTSConfigList = (projectPath, tree, rootConfig, tpl) => {
+         }
+         return exports.reduceTreeNodeToTSConfigList(projectPath, child, rootConfig, tpl);
+     }).flat().filter(Boolean);
+-    const isRoot = tree.path === '';
+-    if (isRoot) {
+-        return [
+-            currentTemplate,
+-            ...extraTemplates,
+-            ...childTemplates,
+-        ];
+-    }
+     return [
++        currentTemplate,
+         ...extraTemplates,
+         ...childTemplates,
+     ];

@@ -1,0 +1,35 @@
+baseConfig: ./tsconfig.base.json
+presets:
+  vite:
+    compilerOptions:
+      target: ESNext
+      useDefineForClassFields: true
+      lib:
+        - DOM
+        - DOM.Iterable
+        - ESNext
+      allowJs: false
+      skipLibCheck: false
+      esModuleInterop: false
+      allowSyntheticDefaultImports: true
+      strict: true
+      forceConsistentCasingInFileNames: true
+      module: ESNext
+      moduleResolution: Node
+      resolveJsonModule: true
+      isolatedModules: true
+      noEmit: true
+      jsx: react-jsx
+    include:
+      - ./src
+  default:
+    compilerOptions:
+      rootDir: 'src'
+      outDir: 'dist'
+      incremental: true
+      tsBuildInfoFile: 'dist/.tsbuildinfo'
+    include:
+      - src/**/*
+    exclude:
+      - src/**.spec.ts
+      - src/**.spec.tsx

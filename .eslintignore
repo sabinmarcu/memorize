@@ -1,0 +1,11 @@
+!.eslintrc.js
+dist
+*.spec.*
+**/types/*.d.ts
+
+# Specific
+packages/prisma/client
+packages/prisma/src/client
+
+# Mongo in Docker Compose
+scripts

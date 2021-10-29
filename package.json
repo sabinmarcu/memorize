@@ -1,0 +1,48 @@
+{
+  "name": "@memorize/root",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Sabin Marcu <sabin.marcu@hootsuite.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-conventional": "^13.2.0",
+    "@tscmono/cli": "0.1.8",
+    "@tscmono/preset-default": "^0.2.0",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-airbnb-typescript": "^14.0.0",
+    "eslint-import-resolver-node": "^0.3.6",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "glob": "^7.2.0",
+    "husky": "^7.0.4",
+    "is-ci": "^3.0.0",
+    "typescript": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/debug": "^4",
+    "@types/eslint": "^7",
+    "@types/glob": "^7",
+    "@types/is-ci": "^3",
+    "@types/node": "^16.10.3",
+    "@types/react": "^17.0.27",
+    "@types/react-dom": "^17.0.9"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "postinstall": "is-ci || husky install",
+    "build": "tsc -b . --listEmittedFiles",
+    "watch": "yarn build --watch --preserveWatchOutput"
+  },
+  "resolutions": {
+    "@tscmono/plugin-repo@0.2.1": "patch:@tscmono/plugin-repo@npm:0.2.1#.yarn/patches/@tscmono-plugin-repo-npm-0.2.1-cbf7f46da3"
+  }
+}

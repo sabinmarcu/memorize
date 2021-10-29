@@ -1,0 +1,18 @@
+{
+  "name": "@memorize/log",
+  "packageManager": "yarn@3.0.2",
+  "main": "dist/index.js",
+  "dependencies": {
+    "@memorize/config": "workspace:packages/config",
+    "@memorize/utils": "workspace:packages/utils",
+    "debug": "^4.3.2",
+    "nanoid": "^3.1.30"
+  },
+  "tscmono": {
+    "preset": "default"
+  },
+  "devDependencies": {
+    "@types/debug": "^4",
+    "@types/node": "^16.11.2"
+  }
+}

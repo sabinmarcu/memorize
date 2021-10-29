@@ -1,0 +1,8 @@
+{
+  "name": "@memorize/utils",
+  "packageManager": "yarn@3.0.2",
+  "main": "dist/index.js",
+  "tscmono": {
+    "preset": "default"
+  }
+}

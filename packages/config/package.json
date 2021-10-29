@@ -1,0 +1,11 @@
+{
+  "name": "@memorize/config",
+  "packageManager": "yarn@3.0.2",
+  "main": "dist/index.js",
+  "dependencies": {
+    "nanoid": "^3.1.30"
+  },
+  "tscmono": {
+    "preset": "default"
+  }
+}
